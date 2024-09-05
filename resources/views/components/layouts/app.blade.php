@@ -97,7 +97,7 @@
     </div>
 </header>
 
-<main class="main">
+<main class="main" dir="rtl">
 
    {{ $slot }}
 
