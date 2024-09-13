@@ -60,7 +60,7 @@
                 <div>
                     <p>
                         <strong>شماره تماس :</strong> <span dir="ltr"> +98 9308282484 </span><br>
-                        <strong>ایمیل :</strong> <span>info@example.com</span><br>
+                        <strong>ایمیل :</strong> <span>info@hiprintink.ir</span><br>
                     </p>
                 </div>
             </div>

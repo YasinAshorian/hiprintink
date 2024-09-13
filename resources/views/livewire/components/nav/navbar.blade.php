@@ -25,8 +25,8 @@
 
             @endforeach
 
-            <li><a href="#"> وبلاگ  </a></li>
-            <li><a href="#">ارتباط با ما</a></li>
+            <li><a href="{{ route('blogs') }}" class="{{ url()->full() == route('blogs') ? "active" : "" }}"> وبلاگ  </a></li>
+            <li><a href="{{ route('contact-us') }}" class="{{ url()->full() == route('contact-us') ? "active" : "" }}">ارتباط با ما</a></li>
         </ul>
 
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>

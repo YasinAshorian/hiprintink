@@ -170,7 +170,7 @@ h6 {
     display: none;
     background: #df1529;
     color: #ffffff;
-    text-align: left;
+    text-align: right;
     padding: 15px;
     margin-bottom: 24px;
     font-weight: 600;
@@ -1435,7 +1435,7 @@ section,
     align-items: center;
     border-radius: 4px;
     transition: all 0.3s ease-in-out;
-    margin-right: 15px;
+    margin-left: 15px;
 }
 
 .contact .info-item h3 {
@@ -1834,4 +1834,16 @@ section,
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
     filter: invert(100%) sepia(100%) saturate(1000%) hue-rotate(180deg);
+}
+
+.text-truncate {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    max-width: 50ch;
+}
+.fs-13 {
+    font-size: 13px !important;
 }

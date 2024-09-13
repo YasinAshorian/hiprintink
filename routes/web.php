@@ -15,6 +15,7 @@ use App\Livewire\Managers\Products\ProductGroupItem;
 use App\Livewire\Managers\Products\Products;
 use App\Livewire\Managers\Sliders\Sliders;
 use App\Livewire\Managers\Users\Users;
+use App\Livewire\Website\Blogs\BlogDetail;
 use App\Livewire\Website\Home\HomePage;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -25,7 +26,9 @@ Route::get('/', HomePage::class)->name('home-page');
 Route::get('/about-us', App\Livewire\Website\AboutUs\AboutUsPage::class)->name('about-us');
 Route::get('/products', \App\Livewire\Website\Products\Products::class)->name('products');
 Route::get('/product/detail/{product}', \App\Livewire\Website\Products\ProductDetail::class)->name('product-detail');
-
+Route::get('/contact-us', \App\Livewire\Website\ContactUs\ContactUs::class)->name('contact-us');
+Route::get('/blogs', \App\Livewire\Website\Blogs\Blogs::class)->name('blogs');
+Route::get('blog/detail/{blog}', BlogDetail::class)->name('blog-detail');
 
 Route::prefix('managers/auth')->middleware('guest')->group(function () {
     Route::get('login', Login::class)->name('login');

@@ -5,19 +5,12 @@
 
         <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
 
-            <div class="carousel-item active">
-                <img src="{{ asset('assets/img/hero-carousel/bg-1.jpg') }}" alt="">
-            </div>
-            <!-- End Carousel Item -->
+            @foreach($sliders as $item)
+                <div class="carousel-item {{ $loop->iteration == 1 ? "active" : '' }}">
+                    <img src="{{ asset("storage/" . $item->path) }}" alt="slider">
+                </div>
+            @endforeach
 
-            <div class="carousel-item">
-                <img src="{{ asset('assets/img/hero-carousel/bg-2.jpg') }}" alt="">
-            </div>
-            <!-- End Carousel Item -->
-
-            <div class="carousel-item">
-                <img src="{{ asset('assets/img/hero-carousel/bg-3.jpg') }}" alt="">
-            </div>
             <!-- End Carousel Item -->
 
             <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
@@ -110,9 +103,9 @@
 
         </div>
 
-        <div class="container text-center mt-5">
-            <a href="#" class="btn btn-outline-primary px-5 "><span>مشاهده بیشتر </span></a>
-        </div>
+{{--        <div class="container text-center mt-5">--}}
+{{--            <a href="#" class="btn btn-outline-secondary px-5 "><span>تمامی محصولات </span></a>--}}
+{{--        </div>--}}
 
     </section>
     <!-- /products -->
@@ -219,252 +212,46 @@
 
 
     <!-- products -->
-        <section id="services" class="services section custom-bg">
-            <div class="container section-title text-right" data-aos="fade-up">
-                <h4 style="font-family:'YekanBakh', sans-serif">برترین محصولات </h4>
+    <section id="services" class="services section custom-bg">
+        <div class="container section-title text-right" data-aos="fade-up">
+            <h4 style="font-family:'YekanBakh', sans-serif">برترین محصولات </h4>
+        </div>
+        <div class="container">
+            <div class="row">
+
+
+                @foreach($bestProducts as $item)
+                    <div class="col-md-6 col-lg-3 mb-4 my-1 d-flex">
+                        <a href="{{ route('product-detail', ['product' => $item->name]) }}">
+                            <div class="card h-100">
+                                <div class="d-flex justify-content-between p-3">
+
+                                </div>
+                                <img src="{{ asset('storage/' . $item->pictures()->first()->path) }}"
+                                     class="card-img-top p-2 rounded-2" alt="Laptop"/>
+
+                                <div class="card-body">
+                                    <div class="text-center">
+                                        <p class="mb-0">{{ $item->name }}</p>
+                                    </div>
+
+                                    <div class="text-center mb-3">
+
+                                        <p class="small">
+                                            <a href="" class="text-muted">{{ $item->short_description }}</a>
+                                        </p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                @endforeach
+
             </div>
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-md-6 col-lg-3 mb-4 my-1 d-flex">
-                        <div class="card h-100">
-                            <div class="d-flex justify-content-between p-3">
-
-                            </div>
-                            <img src="{{ asset('assets/img/products/best/uv_ink_for_epson_1.jpg') }}"
-                                 class="card-img-top p-2 rounded-2" alt="Laptop"/>
-
-                            <div class="card-body">
-                                <div class="d-flex justify-content-between">
-                                    <p class="small">
-                                        <a href="#!" class="text-muted">Laptops</a>
-                                    </p>
-                                    <p class="small text-danger"><s>$1199</s></p>
-                                </div>
-
-                                <div class="d-flex justify-content-between mb-3">
-                                    <h5 class="mb-0">HP Envy</h5>
-                                    <h5 class="text-dark mb-0">$1099</h5>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3 mb-4 my-1 d-flex">
-                        <div class="card h-100">
-                            <div class="d-flex justify-content-between p-3">
-                            </div>
-                            <img src="{{ asset('assets/img/products/best/uv_ink_for_epson_1.jpg') }}"
-                                 class="card-img-top p-2  rounded-2" alt="Laptop"/>
-                            <div class="card-body">
-                                <div class="d-flex justify-content-between">
-                                    <p class="small"><a href="#!" class="text-muted">Laptops</a></p>
-                                    <p class="small text-danger"><s>$1199</s></p>
-                                </div>
-
-                                <div class="d-flex justify-content-between mb-3">
-                                    <h5 class="mb-0">HP Envy</h5>
-                                    <h5 class="text-dark mb-0">$1099</h5>
-                                </div>
-
-                                <div class="d-flex justify-content-between mb-2">
-                                    <p class="text-muted mb-0">Available: <span class="fw-bold">7</span></p>
-                                    <div class="ms-auto text-warning">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="far fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3 mb-4 my-1 d-flex">
-                        <div class="card h-100">
-                            <div class="d-flex justify-content-between p-3">
-
-                            </div>
-                            <img src="{{ asset('assets/img/products/best/uv_ink_for_epson_1.jpg') }}"
-                                 class="card-img-top p-2  rounded-2" alt="Laptop"/>
-                            <div class="card-body">
-                                <div class="d-flex justify-content-between">
-                                    <p class="small"><a href="#!" class="text-muted">Laptops</a></p>
-                                    <p class="small text-danger"><s>$1199</s></p>
-                                </div>
-
-                                <div class="d-flex justify-content-between mb-3">
-                                    <h5 class="mb-0">HP Envy</h5>
-                                    <h5 class="text-dark mb-0">$1099</h5>
-                                </div>
-
-                                <div class="d-flex justify-content-between mb-2">
-                                    <p class="text-muted mb-0">Available: <span class="fw-bold">7</span></p>
-                                    <div class="ms-auto text-warning">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="far fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3 mb-4 my-1 d-flex">
-                        <div class="card h-100">
-                            <div class="d-flex justify-content-between p-3">
-
-                            </div>
-                            <img src="{{ asset('assets/img/products/best/uv_ink_for_epson_1.jpg') }}"
-                                 class="card-img-top p-2  rounded-2" alt="Laptop"/>
-                            <div class="card-body">
-                                <div class="d-flex justify-content-between">
-                                    <p class="small"><a href="#!" class="text-muted">Laptops</a></p>
-                                    <p class="small text-danger"><s>$1199</s></p>
-                                </div>
-
-                                <div class="d-flex justify-content-between mb-3">
-                                    <h5 class="mb-0">HP Envy</h5>
-                                    <h5 class="text-dark mb-0">$1099</h5>
-                                </div>
-
-                                <div class="d-flex justify-content-between mb-2">
-                                    <p class="text-muted mb-0">Available: <span class="fw-bold">7</span></p>
-                                    <div class="ms-auto text-warning">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="far fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="col-md-6 col-lg-3 mb-4 my-1 d-flex">
-                        <div class="card h-100">
-                            <div class="d-flex justify-content-between p-3">
-
-                            </div>
-                            <img src="{{ asset('assets/img/products/best/uv_ink_for_epson_1.jpg') }}"
-                                 class="card-img-top p-2 rounded-2" alt="Laptop"/>
-
-                            <div class="card-body">
-                                <div class="d-flex justify-content-between">
-                                    <p class="small">
-                                        <a href="#!" class="text-muted">Laptops</a>
-                                    </p>
-                                    <p class="small text-danger"><s>$1199</s></p>
-                                </div>
-
-                                <div class="d-flex justify-content-between mb-3">
-                                    <h5 class="mb-0">HP Envy</h5>
-                                    <h5 class="text-dark mb-0">$1099</h5>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3 mb-4 my-1 d-flex">
-                        <div class="card h-100">
-                            <div class="d-flex justify-content-between p-3">
-                            </div>
-                            <img src="{{ asset('assets/img/products/best/uv_ink_for_epson_1.jpg') }}"
-                                 class="card-img-top p-2  rounded-2" alt="Laptop"/>
-                            <div class="card-body">
-                                <div class="d-flex justify-content-between">
-                                    <p class="small"><a href="#!" class="text-muted">Laptops</a></p>
-                                    <p class="small text-danger"><s>$1199</s></p>
-                                </div>
-
-                                <div class="d-flex justify-content-between mb-3">
-                                    <h5 class="mb-0">HP Envy</h5>
-                                    <h5 class="text-dark mb-0">$1099</h5>
-                                </div>
-
-                                <div class="d-flex justify-content-between mb-2">
-                                    <p class="text-muted mb-0">Available: <span class="fw-bold">7</span></p>
-                                    <div class="ms-auto text-warning">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="far fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3 mb-4 my-1 d-flex">
-                        <div class="card h-100">
-                            <div class="d-flex justify-content-between p-3">
-
-                            </div>
-                            <img src="{{ asset('assets/img/products/best/uv_ink_for_epson_1.jpg') }}"
-                                 class="card-img-top p-2  rounded-2" alt="Laptop"/>
-                            <div class="card-body">
-                                <div class="d-flex justify-content-between">
-                                    <p class="small"><a href="#!" class="text-muted">Laptops</a></p>
-                                    <p class="small text-danger"><s>$1199</s></p>
-                                </div>
-
-                                <div class="d-flex justify-content-between mb-3">
-                                    <h5 class="mb-0">HP Envy</h5>
-                                    <h5 class="text-dark mb-0">$1099</h5>
-                                </div>
-
-                                <div class="d-flex justify-content-between mb-2">
-                                    <p class="text-muted mb-0">Available: <span class="fw-bold">7</span></p>
-                                    <div class="ms-auto text-warning">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="far fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3 mb-4 my-1 d-flex">
-                        <div class="card h-100">
-                            <div class="d-flex justify-content-between p-3">
-
-                            </div>
-                            <img src="{{ asset('assets/img/products/best/uv_ink_for_epson_1.jpg') }}"
-                                 class="card-img-top p-2  rounded-2" alt="Laptop"/>
-                            <div class="card-body">
-                                <div class="d-flex justify-content-between">
-                                    <p class="small"><a href="#!" class="text-muted">Laptops</a></p>
-                                    <p class="small text-danger"><s>$1199</s></p>
-                                </div>
-
-                                <div class="d-flex justify-content-between mb-3">
-                                    <h5 class="mb-0">HP Envy</h5>
-                                    <h5 class="text-dark mb-0">$1099</h5>
-                                </div>
-
-                                <div class="d-flex justify-content-between mb-2">
-                                    <p class="text-muted mb-0">Available: <span class="fw-bold">7</span></p>
-                                    <div class="ms-auto text-warning">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="far fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-        <!-- /products -->
+        </div>
+    </section>
+    <!-- /products -->
 
 
     <!-- Testimonials Section -->
@@ -507,25 +294,25 @@
 
                     <div class="swiper-slide">
                         <div class="testimonial-item">
-                            <img src="{{ asset('assets/img/brands/brother-ink-cartridges.avif') }}"  alt="brands">
+                            <img src="{{ asset('assets/img/brands/brother-ink-cartridges.avif') }}" alt="brands">
                         </div>
                     </div>
 
                     <div class="swiper-slide">
                         <div class="testimonial-item">
-                            <img src="{{ asset('assets/img/brands/canon-ink-cartridges.avif') }}"  alt="brands">
+                            <img src="{{ asset('assets/img/brands/canon-ink-cartridges.avif') }}" alt="brands">
                         </div>
                     </div>
 
                     <div class="swiper-slide">
                         <div class="testimonial-item">
-                            <img src="{{ asset('assets/img/brands/epson-ink-cartridges.avif') }}"  alt="brands">
+                            <img src="{{ asset('assets/img/brands/epson-ink-cartridges.avif') }}" alt="brands">
                         </div>
                     </div>
 
                     <div class="swiper-slide">
                         <div class="testimonial-item">
-                            <img src="{{ asset('assets/img/brands/hp-ink-cartridges.png') }}"  alt="brands">
+                            <img src="{{ asset('assets/img/brands/hp-ink-cartridges.png') }}" alt="brands">
                         </div>
                     </div>
 
@@ -545,9 +332,36 @@
         </div>
         <div class="container">
             <div class="row">
-                <img src="{{ asset('assets/img/distributed.jpg') }}"  alt="distributed">
+                <img src="{{ asset('assets/img/distributed.jpg') }}" alt="distributed">
             </div>
         </div>
+    </section>
+
+    <section id="blogs" class="about section">
+
+        <div class="container">
+
+            <div class="row gy-4">
+
+                @foreach($blogs as $item)
+                    <div class="col-md-6 col-lg-3 d-flex">
+                        <div class="card h-100">
+                            <img src="{{ asset('storage/' . $item->image) }}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h6 class="card-title">{{ $item->subject }}</h6>
+                                <p class="card-text text-truncate fs-13">{{ $item->short_description }}</p>
+                                <div class="text-center">
+                                    <a href="{{ route('blog-detail', $item->subject) }}"
+                                       class="btn btn-secondary my-3 btn-sm px-5 ">مشاهده</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+
+            </div>
+        </div>
+
     </section>
 
 </div>
