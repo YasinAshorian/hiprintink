@@ -76,8 +76,8 @@
                 <!-- Dashboards -->
 
 
-                <li class="menu-item ">
-                    <a href="" class="menu-link">
+                <li class="menu-item {{ route('managers.dashboard') == url()->full() ? "active" : "" }}">
+                    <a href="{{ route('managers.dashboard') }}" class="menu-link ">
                         <i class="menu-icon tf-icons bx bxs-dashboard"></i>
                         <div class="text-truncate" >داشبورد</div>
                     </a>
@@ -85,37 +85,31 @@
 
 
 
-                <li class="menu-item ">
-                    <a href="#" class="menu-link">
+                <li class="menu-item {{ route('managers.users') == url()->full() ? "active" : "" }}">
+                    <a href="{{ route('managers.users') }}" class="menu-link">
                         <i class="menu-icon tf-icons bx bx-user"></i>
                         <div class="text-truncate" >کاربران ادمین </div>
                     </a>
                 </li>
 
 
-                <li class="menu-item ">
+                <li class="menu-item {{ in_array(url()->full(), [route('managers.product-group'), route('managers.products')]) ? "open active" : "" }}">
                     <a href="javascript:void(0);" class="menu-link menu-toggle">
                         <i class="menu-icon tf-icons bx bx-server"></i>
-                        <div class="text-truncate" >سرویس ها </div>
+                        <div class="text-truncate" >محصولات </div>
                     </a>
 
                     <ul class="menu-sub">
 
-                        <li class="menu-item ">
-                            <a href="#" class="menu-link">
-                                <div class="text-truncate" > لیست سرویس ها </div>
+                        <li class="menu-item {{ route('managers.product-group') == url()->full() ? "active" : "" }}">
+                            <a href="{{ route('managers.product-group') }}" class="menu-link">
+                                <div class="text-truncate" >گروه محصولات </div>
                             </a>
                         </li>
 
-                        <li class="menu-item ">
-                            <a href="#" class="menu-link">
-                                <div class="text-truncate">ویژگی های سرویس  </div>
-                            </a>
-                        </li>
-
-                        <li class="menu-item ">
-                            <a href="#" class="menu-link">
-                                <div class="text-truncate">پلن های سرویس  </div>
+                        <li class="menu-item {{ route('managers.products') == url()->full() ? "active" : "" }}">
+                            <a href="{{ route('managers.products') }}" class="menu-link">
+                                <div class="text-truncate">محصولات </div>
                             </a>
                         </li>
 
@@ -220,6 +214,13 @@
                     </ul>
                 </li>
 
+                <li class="menu-item {{ route('logout') == url()->full() ? "active" : "" }}">
+                    <a href="{{ route('logout') }}" class="menu-link">
+                        <i class="menu-icon tf-icons bx bx-log-out"></i>
+                        <div class="text-truncate" >خروج </div>
+                    </a>
+                </li>
+
             </ul>
 
 
@@ -281,41 +282,16 @@
                                                 </div>
                                             </div>
                                             <div class="flex-grow-1">
-                                                <span class="fw-medium d-block">یاسین عاشوریان </span>
-                                                <small class="text-muted">ادمین </small>
+                                                <span class="fw-medium d-block">{{ auth()->user()->name }}</span>
+                                                <small class="text-muted">{{ auth()->user()->email }} </small>
                                             </div>
                                         </div>
                                     </a>
                                 </li>
-                                <li>
-                                    <div class="dropdown-divider"></div>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#">
-                                        <i class="bx bx-user me-2"></i>
-                                        <span class="align-middle">پروفایل من </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="">
-                                        <i class="bx bx-cog me-2"></i>
-                                        <span class="align-middle">تنظیمات </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="">
-                                        <span class="d-flex align-items-center align-middle">
-                                          <i class="flex-shrink-0 bx bx-credit-card me-2"></i>
-                                          <span class="flex-grow-1 align-middle">کیف پول </span>
-                                          <span class="h-px-20 px-2">1200,0000</span> <span>ریال </span>
-                                        </span>
-                                    </a>
-                                </li>
 
-                                <div class="dropdown-divider"></div>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="#" >
+                            <a class="dropdown-item" href="{{ route('logout') }}" >
                                 <i class="bx bx-power-off me-2"></i>
                                 <span class="align-middle">خروج </span>
                             </a>

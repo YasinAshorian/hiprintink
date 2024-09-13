@@ -9,9 +9,9 @@
                     <div class="card drag-item cursor-move mb-lg-0 mb-4">
                         <div class="card-body text-center">
                             <h2>
-                                <i class="bx bx-user text-success display-6"></i>
+                                <i class="bx bx-server text-success display-6"></i>
                             </h2>
-                            <h4>مشتریان </h4>
+                            <h5>تعداد محصولات فعال </h5>
                             <h5>12</h5>
                         </div>
                     </div>
@@ -21,9 +21,9 @@
                     <div class="card drag-item cursor-move mb-lg-0 mb-4">
                         <div class="card-body text-center">
                             <h2>
-                                <i class="bx bx-calculator text-info display-6"></i>
+                                <i class="bx bx-news text-info display-6"></i>
                             </h2>
-                            <h4>فاکتور های پرداخت شده  </h4>
+                            <h5>تعداد اخبار </h5>
                             <h5>25</h5>
                         </div>
                     </div>
@@ -32,9 +32,9 @@
                     <div class="card drag-item cursor-move mb-lg-0 mb-4">
                         <div class="card-body text-center">
                             <h2>
-                                <i class="bx bx-calculator text-danger display-6"></i>
+                                <i class="bx bxl-telegram text-danger display-6"></i>
                             </h2>
-                            <h4>فاکتور های پرداخت نشده </h4>
+                            <h5>تعداد پیغام ها </h5>
                             <h5>25</h5>
                         </div>
                     </div>
@@ -44,9 +44,9 @@
                     <div class="card drag-item cursor-move mb-lg-0 mb-4">
                         <div class="card-body text-center">
                             <h2>
-                                <i class="bx bx-credit-card text-primary display-6"></i>
+                                <i class="bx bx-paperclip text-primary display-6"></i>
                             </h2>
-                            <h4>تراکنش ها </h4>
+                            <h5>تعداد وبلاگ ها </h5>
                             <h5>12</h5>
 
                         </div>

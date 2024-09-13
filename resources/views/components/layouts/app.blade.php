@@ -34,72 +34,7 @@
 <body class="index-page">
 
 <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-
-        <a href="#" class="logo d-flex align-items-center">
-            <img src="{{ asset('assets/img/hi-logo.jpg') }}" alt="hi-logo">
-        </a>
-
-        <nav id="navmenu" class="navmenu" dir="rtl">
-            <ul>
-                <li><a href="#" class="active">صفحه اصلی </a></li>
-                <li><a href="#">درباره ما</a></li>
-                <li class="dropdown"><a href="#"><span>جوهر UV LED</span> <i
-                            class="bi bi-chevron-down toggle-dropdown"></i></a>
-                    <ul>
-                        <li><a href="#">جوهر UV برای EPSON</a></li>
-                        <li><a href="#">جوهر UV برای Konica /...</a></li>
-                        <li><a href="#">جوهر UV برای GH2220</a></li>
-                        <li><a href="#">تمیزکننده UV</a></li>
-                        <li><a href="#">روکش UV</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown"><a href="#"><span>جوهر نساجی</span> <i
-                            class="bi bi-chevron-down toggle-dropdown"></i></a>
-                    <ul>
-                        <li><a href="#">جوهر DTG</a></li>
-                        <li><a href="#">جوهر تصعیدی</a></li>
-                        <li><a href="#">جوهر واکنشی</a></li>
-                        <li><a href="#">جوهر اسیدی</a></li>
-                    </ul>
-                </li>
-
-                <li class="dropdown"><a href="#"><span>جوهر اکو/حلال </span> <i
-                            class="bi bi-chevron-down toggle-dropdown"></i></a>
-                    <ul>
-                        <li><a href="#">جوهر حلال</a></li>
-                        <li><a href="#">جوهر اکو-حلال</a></li>
-                    </ul>
-                </li>
-
-                <li class="dropdown"><a href="#"><span>راهکارهای چاپ </span> <i
-                            class="bi bi-chevron-down toggle-dropdown"></i></a>
-                    <ul>
-                        <li><a href="#">جوهر لاتکس </a></li>
-                        <li><a href="#">چاپگر دیجیتال</a></li>
-                        <li><a href="#">دستگاه پرس حرارتی</a></li>
-                        <li><a href="#">راهکار چاپ DTG (مستقیم روی لباس)</a></li>
-                        <li><a href="#">راهکار چاپ کاغذ دیواری</a></li>
-                        <li><a href="#">کاغذ تصعید</a></li>
-                    </ul>
-                </li>
-
-                <li class="dropdown"><a href="#"><span>لوازم یدکی </span> <i
-                            class="bi bi-chevron-down toggle-dropdown"></i></a>
-                    <ul>
-                        <li><a href="#">لوازم یدکی خودروهای سواری</a></li>
-                        <li><a href="#">لوازم یدکی خودروهای کلاسیک</a></li>
-                        <li><a href="#">لوازم یدکی موتور سیکلت</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">اخبار</a></li>
-                <li><a href="#">وبلاگ</a></li>
-                <li><a href="#">ارتباط با ما</a></li>
-            </ul>
-            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-        </nav>
-
-    </div>
+    <livewire:components.nav.navbar></livewire:components.nav.navbar>
 </header>
 
 <main class="main" dir="rtl">

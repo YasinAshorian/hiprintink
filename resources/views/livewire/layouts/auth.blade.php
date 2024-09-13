@@ -11,7 +11,7 @@
 
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="{{ asset('assets/logo/learncraft.png') }}" />
+    <link rel="icon" type="image/x-icon" href="{{ asset('assets/img/hi-logo.jpg') }}" />
 
     <!-- Icons -->
     <link rel="stylesheet" href="{{ asset('assets_panel/vendor/fonts/boxicons.css') }}" />

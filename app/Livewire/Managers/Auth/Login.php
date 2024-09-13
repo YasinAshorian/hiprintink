@@ -2,19 +2,20 @@
 
 namespace App\Livewire\Managers\Auth;
 
+use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 
 class Login extends Component
 {
 
-    public $username;
+    public $email;
     public $password;
 
 
     public function rules()
     {
         return [
-            'username' => 'required|exists:managers,username',
+            'email' => 'required|exists:users,email',
             'password' => 'required|string'
         ];
     }
@@ -22,8 +23,8 @@ class Login extends Component
     public function messages()
     {
         return [
-            'username.required' => 'اطلاعات را به درستی وارد نمایید.',
-            'username.exists' => 'به این بخش دسترسی ندارید.',
+            'email.required' => 'اطلاعات را به درستی وارد نمایید.',
+            'email.exists' => 'به این بخش دسترسی ندارید.',
             'password' => 'وارد نمودن پسورد الزامیست .'
         ];
     }
@@ -31,12 +32,19 @@ class Login extends Component
 
     public function login()
     {
+        $this->validate();
+
+        if (Auth::attempt(['email' => $this->email, 'password' => $this->password])) {
+            return redirect()->route('managers.dashboard')->with(['success' => true, 'message' => "ورود به سیستم با موفقیت انجام شد ."]);
+        }
+
+        return back()->with(['error' => true, 'message' => "مشکلی در فرآیند ورود به سیستم به وجود آمده !"]);
 
     }
 
 
     public function render()
     {
-        return view('livewire.managers.auth.login')->layout('livewire.layouts.manager-auth');
+        return view('livewire.managers.auth.login')->layout('livewire.layouts.auth');
     }
 }
