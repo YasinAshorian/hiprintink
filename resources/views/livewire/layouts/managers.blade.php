@@ -93,6 +93,13 @@
                 </li>
 
 
+                <li class="menu-item {{ url()->full() == route('managers.sliders') ? 'active' : '' }}">
+                    <a href="{{ route('managers.sliders') }}" class="menu-link">
+                        <i class="menu-icon tf-icons bx bx-photo-album"></i>
+                        <div class="text-truncate fw-bold">اسلایدر ها</div>
+                    </a>
+                </li>
+
                 <li class="menu-item {{ in_array(url()->full(), [route('managers.product-group'), route('managers.products')]) ? "open active" : "" }}">
                     <a href="javascript:void(0);" class="menu-link menu-toggle">
                         <i class="menu-icon tf-icons bx bx-server"></i>
@@ -116,82 +123,9 @@
                     </ul>
                 </li>
 
-                <li class="menu-item ">
-                    <a href="javascript:void(0);" class="menu-link menu-toggle">
-                        <i class="menu-icon tf-icons bx bx-window-open"></i>
-                        <div class="text-truncate" >نمونه کار ها   </div>
-                    </a>
-
-                    <ul class="menu-sub">
-
-                        <li class="menu-item ">
-                            <a href="#" class="menu-link">
-                                <div class="text-truncate">لیست نمونه کار ها  </div>
-                            </a>
-                        </li>
-
-                        <li class="menu-item ">
-                            <a href="#" class="menu-link">
-                                <div class="text-truncate">لیست دسته بندی ها </div>
-                            </a>
-                        </li>
-
-                    </ul>
-                </li>
 
 
-                <li class="menu-item ">
-                    <a href="javascript:void(0);" class="menu-link menu-toggle">
-                        <i class="menu-icon tf-icons bx bx-user-circle"></i>
-                        <div class="text-truncate" >مشتریان  </div>
-                    </a>
-
-                    <ul class="menu-sub">
-
-                        <li class="menu-item ">
-                            <a href="#" class="menu-link">
-                                <div class="text-truncate" >لیست مشتریان  </div>
-                            </a>
-                        </li>
-
-                    </ul>
-                </li>
-
-                <li class="menu-item ">
-                    <a href="javascript:void(0);" class="menu-link menu-toggle">
-                        <i class="menu-icon tf-icons bx bx-calculator"></i>
-                        <div class="text-truncate" >فاکتور ها   </div>
-                    </a>
-
-                    <ul class="menu-sub">
-
-                        <li class="menu-item ">
-                            <a href="#" class="menu-link">
-                                <div class="text-truncate">لیست فاکتور ها </div>
-                            </a>
-                        </li>
-
-                    </ul>
-                </li>
-
-                <li class="menu-item">
-                    <a href="javascript:void(0);" class="menu-link menu-toggle">
-                        <i class="menu-icon tf-icons bx bx-chart"></i>
-                        <div class="text-truncate" >گزارشات  </div>
-                    </a>
-
-                    <ul class="menu-sub">
-
-                        <li class="menu-item">
-                            <a href="" class="menu-link">
-                                <div class="text-truncate">گزارشات </div>
-                            </a>
-                        </li>
-
-                    </ul>
-                </li>
-
-                <li class="menu-item ">
+                <li class="menu-item {{ in_array(url()->full(), [route('manager.topics'), route('manager.blogs')]) ? "open active" : "" }}">
                     <a href="javascript:void(0);" class="menu-link menu-toggle">
                         <i class="menu-icon tf-icons bx bx-book"></i>
                         <div class="text-truncate" >مقالات  </div>
@@ -199,19 +133,26 @@
 
                     <ul class="menu-sub">
 
-                        <li class="menu-item ">
-                            <a href="" class="menu-link">
+                        <li class="menu-item {{ route('manager.blogs') == url()->full() ? "active" : "" }}">
+                            <a href="{{ route('manager.blogs') }}" class="menu-link">
                                 <div class="text-truncate">لیست مقالات </div>
                             </a>
                         </li>
 
-                        <li class="menu-item ">
-                            <a href="#" class="menu-link">
+                        <li class="menu-item {{ route('manager.topics') == url()->full() ? "active" : "" }}">
+                            <a href="{{ route('manager.topics') }}" class="menu-link">
                                 <div class="text-truncate">لیست دسته بندی ها </div>
                             </a>
                         </li>
 
                     </ul>
+                </li>
+
+                <li class="menu-item {{ route('manager.contact-us') == url()->full() ? "active" : "" }}">
+                    <a href="{{ route('manager.contact-us') }}" class="menu-link">
+                        <i class="menu-icon tf-icons bx bxs-inbox"></i>
+                        <div class="text-truncate" >پیغام های ارسالی  </div>
+                    </a>
                 </li>
 
                 <li class="menu-item {{ route('logout') == url()->full() ? "active" : "" }}">

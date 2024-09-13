@@ -25,8 +25,7 @@
 
             @endforeach
 
-            <li><a href="#">اخبار</a></li>
-            <li><a href="#">وبلاگ</a></li>
+            <li><a href="#"> وبلاگ  </a></li>
             <li><a href="#">ارتباط با ما</a></li>
         </ul>
 

@@ -469,13 +469,6 @@
 
     <!-- Testimonials Section -->
     <section id="testimonials" class="testimonials section">
-
-        <!-- Section Title -->
-{{--        <div class="container section-title" data-aos="fade-up">--}}
-{{--            <h2>Testimonials</h2>--}}
-{{--            <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>--}}
-{{--        </div>--}}
-
         <div class="container" data-aos="fade-up" data-aos-delay="100">
 
             <div class="swiper init-swiper">
@@ -542,8 +535,19 @@
             </div>
 
         </div>
+    </section>
+    <!-- /Testimonials Section -->
 
-    </section><!-- /Testimonials Section -->
 
+    <section id="services" class="services section">
+        <div class="container section-title text-center" data-aos="fade-up">
+            <h4 style="font-family:'YekanBakh', sans-serif">توزیع بین المللی</h4>
+        </div>
+        <div class="container">
+            <div class="row">
+                <img src="{{ asset('assets/img/distributed.jpg') }}"  alt="distributed">
+            </div>
+        </div>
+    </section>
 
 </div>

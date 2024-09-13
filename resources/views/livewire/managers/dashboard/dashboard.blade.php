@@ -12,7 +12,7 @@
                                 <i class="bx bx-server text-success display-6"></i>
                             </h2>
                             <h5>تعداد محصولات فعال </h5>
-                            <h5>12</h5>
+                            <h5>{{ $products }}</h5>
                         </div>
                     </div>
                 </div>
@@ -23,8 +23,8 @@
                             <h2>
                                 <i class="bx bx-news text-info display-6"></i>
                             </h2>
-                            <h5>تعداد اخبار </h5>
-                            <h5>25</h5>
+                            <h5>تعداد مقالات  </h5>
+                            <h5>{{ $blogs }}</h5>
                         </div>
                     </div>
                 </div>
@@ -32,10 +32,10 @@
                     <div class="card drag-item cursor-move mb-lg-0 mb-4">
                         <div class="card-body text-center">
                             <h2>
-                                <i class="bx bxl-telegram text-danger display-6"></i>
+                                <i class="bx bxs-inbox text-danger display-6"></i>
                             </h2>
                             <h5>تعداد پیغام ها </h5>
-                            <h5>25</h5>
+                            <h5>{{ $contactUs }}</h5>
                         </div>
                     </div>
                 </div>
@@ -44,10 +44,10 @@
                     <div class="card drag-item cursor-move mb-lg-0 mb-4">
                         <div class="card-body text-center">
                             <h2>
-                                <i class="bx bx-paperclip text-primary display-6"></i>
+                                <i class="bx bx-user text-primary display-6"></i>
                             </h2>
-                            <h5>تعداد وبلاگ ها </h5>
-                            <h5>12</h5>
+                            <h5>تعداد کاربران ادمین </h5>
+                            <h5>{{ $users }}</h5>
 
                         </div>
                     </div>
