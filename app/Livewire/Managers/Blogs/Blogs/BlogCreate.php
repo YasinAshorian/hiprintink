@@ -61,6 +61,7 @@ class BlogCreate extends Component
 
     public function render()
     {
+
         $topics = BlogTopic::all();
         return view('livewire.managers.blogs.blogs.blog-create', ['topics' => $topics])->layout('livewire.layouts.managers');
     }
