@@ -3,8 +3,11 @@
 namespace Database\Seeders;
 
 use App\Models\User;
+
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 
 class DatabaseSeeder extends Seeder
 {
@@ -13,6 +16,15 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-         User::factory(1)->create();
+        $user = User::query()->where('email', "administrator@hiprint.com")->first();
+        if (!$user) {
+            User::query()->create([
+                'name' => "administrator",
+                'email' => "administrator@hiprint.com",
+                'email_verified_at' => now(),
+                'password' => Hash::make('Password1415!@#$'),
+                'remember_token' => Str::random(10),
+            ]);
+        }
     }
 }

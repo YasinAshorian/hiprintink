@@ -17,10 +17,14 @@ use App\Livewire\Managers\Sliders\Sliders;
 use App\Livewire\Managers\Users\Users;
 use App\Livewire\Website\Blogs\BlogDetail;
 use App\Livewire\Website\Home\HomePage;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use UniSharp\LaravelFilemanager\Lfm;
 
+Route::get('mig', function () {
+    Artisan::call("migrate --seed");
+});
 
 Route::get('/', HomePage::class)->name('home-page');
 Route::get('/about-us', App\Livewire\Website\AboutUs\AboutUsPage::class)->name('about-us');

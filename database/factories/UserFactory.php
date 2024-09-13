@@ -23,13 +23,7 @@ class UserFactory extends Factory
      */
     public function definition(): array
     {
-        return [
-            'name' => "administrator",
-            'email' => "administrator@hiprint.com",
-            'email_verified_at' => now(),
-            'password' => Hash::make('Password1415!@#$'),
-            'remember_token' => Str::random(10),
-        ];
+       ///
     }
 
     /**
