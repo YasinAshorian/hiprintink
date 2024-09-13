@@ -57,7 +57,11 @@
 
                     </div>
                 </div>
-                <div class="col-md-8">
+
+                <div class="col-md-12 m-auto">
+                    <div class="text-center my-5 ">
+                        <h5>{{ $product->name }}</h5>
+                    </div>
                     <div class="my-5 py-5 px-1">
                         {!! $product->description !!}
                     </div>

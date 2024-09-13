@@ -22,9 +22,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use UniSharp\LaravelFilemanager\Lfm;
 
-Route::get('stg', function () {
-    Artisan::call("storage:link");
-});
+
 
 Route::get('/', HomePage::class)->name('home-page');
 Route::get('/about-us', App\Livewire\Website\AboutUs\AboutUsPage::class)->name('about-us');
