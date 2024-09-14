@@ -619,7 +619,7 @@ h6 {
     position: fixed;
     visibility: hidden;
     opacity: 0;
-    right: 15px;
+    left: 15px;
     bottom: 15px;
     z-index: 99999;
     background-color: var(--accent-color);
@@ -627,6 +627,7 @@ h6 {
     height: 40px;
     border-radius: 4px;
     transition: all 0.4s;
+    display: none !important;
 }
 
 .scroll-top i {
@@ -1850,8 +1851,8 @@ section,
 
 .contact-button {
     position: fixed;
-    bottom: 5px;
-    right: 20px;
+    bottom: 15px;
+    right: 15px;
     background-color: var(--accent-color);
     color: white;
     border-radius: 20%;
@@ -1863,6 +1864,7 @@ section,
     font-size: 24px;
     text-decoration: none;
     z-index: 9999999;
+    transition: all 0.4s;
 }
 
 .contact-button:hover {
