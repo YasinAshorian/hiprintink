@@ -27,7 +27,12 @@
 
             <div class="row gy-4">
 
-                <div class="col-md-8">
+                <div class="col-md-12 m-auto">
+
+                    <div class="text-center my-5 ">
+                        <h5>{{ $blog->subject }}</h5>
+                    </div>
+
                     <div class="my-5 py-5 px-1">
                         {!! $blog->description !!}
                     </div>
