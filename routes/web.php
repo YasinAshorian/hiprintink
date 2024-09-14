@@ -17,7 +17,6 @@ use App\Livewire\Managers\Sliders\Sliders;
 use App\Livewire\Managers\Users\Users;
 use App\Livewire\Website\Blogs\BlogDetail;
 use App\Livewire\Website\Home\HomePage;
-use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use UniSharp\LaravelFilemanager\Lfm;
