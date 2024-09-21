@@ -49,6 +49,7 @@
                                         <p class="small">
                                             <a href="" class="text-muted">{{ $item->short_description }}</a>
                                         </p>
+                                        <p class="mb-0 fw-bold text-secondary">{{ number_format($item->price) }} تومان </p>
                                     </div>
 
                                 </div>

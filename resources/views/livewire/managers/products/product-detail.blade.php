@@ -126,6 +126,12 @@
                                    wire:model="images" {{ ($create) ? "required" : "" }} multiple>
                         </div>
 
+                        <div class="col-md-6">
+                            <label class="form-label" for="images">مبلغ (تومان)</label>
+                            <input type="number" id="images" class="form-control"
+                                   wire:model="price"  required>
+                        </div>
+
                         <div class="col-md-12">
 
                             <h6>نمایش اولیه :</h6>
