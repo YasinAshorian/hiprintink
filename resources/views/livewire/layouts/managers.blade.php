@@ -96,7 +96,7 @@
                 <li class="menu-item {{ url()->full() == route('managers.sliders') ? 'active' : '' }}">
                     <a href="{{ route('managers.sliders') }}" class="menu-link">
                         <i class="menu-icon tf-icons bx bx-photo-album"></i>
-                        <div class="text-truncate fw-bold">اسلایدر ها</div>
+                        <div class="text-truncate ">اسلایدر ها</div>
                     </a>
                 </li>
 

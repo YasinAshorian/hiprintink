@@ -238,8 +238,10 @@
                                     <div class="text-center mb-3">
 
                                         <p class="small">
-                                            <a href="" class="text-muted">{{ $item->short_description }}</a>
+                                            <a href="{{ route('product-detail', ['product' => $item->name]) }}" class="text-muted">{{ $item->short_description }}</a>
                                         </p>
+                                        <p class="mb-0 fw-bold text-secondary">{{ number_format($item->price) }} تومان </p>
+
                                     </div>
 
                                 </div>

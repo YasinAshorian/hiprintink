@@ -21,6 +21,7 @@ class ProductDetail extends Component
     public $description;
     public $images = [];
     public $status;
+    public $price;
     public $top_products;
     public $pictures = [];
 
@@ -38,6 +39,7 @@ class ProductDetail extends Component
             $this->pictures = $this->product->pictures;
             $this->status = $this->product->status;
             $this->top_products = ($this->product->top_products);
+            $this->price = $this->product->price;
 
         }
     }
@@ -52,6 +54,7 @@ class ProductDetail extends Component
             "images" => "nullable|array",
             "status" => "required|string",
             "top_products" => "required|boolean",
+            "price" => "required|integer",
         ];
     }
 
@@ -65,6 +68,7 @@ class ProductDetail extends Component
             "images.*" => "تصاویر محصول خود را به درستی وارد کنید.",
             "status" => "وضعیت محصول خود را به درستی انتخاب کنید.",
             "top_products" => "نمایش در محصولات برتر را به درستی انتخاب کنید.",
+            "price" => "هزینه محصول را به درستی وارد نمایید .",
         ];
     }
 
