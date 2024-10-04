@@ -33,8 +33,8 @@
 
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
-            <h2>محصولات شرکت Hi-print</h2>
-            <p>تولد کننده مدیا و مواد اولیه چاپ از کشور چین</p>
+            <h2> شرکت <span class="text-danger">Hi-print</span></h2>
+            <p>تولید کننده و صادر کننده ماشین آلات چاپ و بسته بندی و انواع مواد اولیه کل صنعت چاپ</p>
         </div>
 
         <!-- End Section Title -->
@@ -115,7 +115,7 @@
 
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
-            <h2>کیفیت جهانی، قیمت رقابتی </h2>
+            <h2>کیفیت جهانی،<span class="text-danger"> قیمت رقابتی</span> </h2>
             <p>با نوآوری و کیفیت در محصولات، همراهتان هستیم تا بهترین نتایج چاپی را به دست آورید.</p>
         </div>
         <!-- End Section Title -->
@@ -131,17 +131,17 @@
                 </div>
 
                 <div class="col-lg-6 col-12 ">
-                    <p class="pt-3">شرکت Hi-Print با بیش از ۱۵ سال سابقه درخشان در تولید جوهر و مدیاهای چاپ دیجیتال، به
+                    <p class="pt-3">شرکت <span class="text-danger">Hi-Print</span> با بیش از ۱۵ سال سابقه درخشان در تولید جوهر و مدیاهای چاپ دیجیتال، به
                         عنوان یکی از پیشگامان این صنعت شناخته می‌شود. این شرکت با تکیه بر فناوری‌های پیشرفته و
                         استانداردهای بین‌المللی، محصولاتی با کیفیت بی‌نظیر برای دستگاه‌های Large Format تولید کرده است.
-                        در طی سال‌ها، Hi-Print موفق شده است با ارائه محصولات با کیفیت، جایگاه معتبری در سطح جهانی کسب
+                        در طی سال‌ها، <span class="text-danger">Hi-Print</span> موفق شده است با ارائه محصولات با کیفیت، جایگاه معتبری در سطح جهانی کسب
                         کند، به‌طوری‌که هم‌اکنون یکی از انتخاب‌های اول برندهای برجسته دستگاه‌های چاپگر در سراسر دنیا شده
                         است.</p>
-                    <p>شرکت Hiprint به عنوان یکی از بزرگترین تأمین‌کنندگان جوهرهای Hi-Print در ایران، مفتخر است که امکان
+                    <p>شرکت <span class="text-danger">Hi-Print</span> به عنوان یکی از بزرگترین تأمین‌کنندگان جوهرهای <span class="text-danger">Hi-Print</span> در ایران، مفتخر است که امکان
                         دسترسی آسان به محصولات این برند جهانی را برای مشتریان داخلی فراهم کرده است. با تلاش مستمر و تعهد
-                        به ارائه محصولات با کیفیت، Hiprint نقش مؤثری در تقویت ارتباط بین تولیدکنندگان بزرگ جهانی و
+                        به ارائه محصولات با کیفیت، <span class="text-danger">Hi-Print</span> نقش مؤثری در تقویت ارتباط بین تولیدکنندگان بزرگ جهانی و
                         مشتریان ایرانی ایفا کرده و همواره در جهت توسعه و رشد بازار داخلی، گام‌های مؤثری برداشته است. این
-                        همکاری نزدیک با Hi-Print به مشتریان ایرانی این امکان را می‌دهد تا به پیشرفته‌ترین و با
+                        همکاری نزدیک با <span class="text-danger">Hi-Print</span> به مشتریان ایرانی این امکان را می‌دهد تا به پیشرفته‌ترین و با
                         کیفیت‌ترین محصولات چاپی در دنیا دسترسی داشته باشند.</p>
 
                 </div>
@@ -163,7 +163,7 @@
                 <div class="col-lg-4 col-md-4 col-sm-6 col-12" data-aos="fade-up" data-aos-delay="100">
                     <div class="service-item  position-relative">
 
-                        <i class="bi bi-emoji-smile fs-50 text-info"></i>
+                        <i class="bi bi-emoji-smile fs-50 text-danger"></i>
 
                         <a href="#" class="stretched-link">
                             <h3>چاپ بیشتر، صرفه‌جویی بیشتر</h3>
@@ -177,7 +177,7 @@
 
                 <div class="col-lg-4 col-md-4 col-sm-6 col-12" data-aos="fade-up" data-aos-delay="200">
                     <div class="service-item position-relative">
-                        <i class="bi bi-shield-check fs-50 text-info"></i>
+                        <i class="bi bi-shield-check fs-50 text-danger"></i>
 
                         <a href="#" class="stretched-link">
                             <h3>تضمین 100% سازگاری </h3>
@@ -191,7 +191,7 @@
 
                 <div class="col-lg-4 col-md-4 col-sm-6 col-12" data-aos="fade-up" data-aos-delay="300">
                     <div class="service-item position-relative">
-                        <i class="bi bi-gem fs-50 text-info"></i>
+                        <i class="bi bi-gem fs-50 text-danger"></i>
 
                         <a href="#" class="stretched-link">
                             <h3>قیمت مناسب و کیفیت تضمین‌شده</h3>

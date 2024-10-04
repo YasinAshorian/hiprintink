@@ -52,15 +52,30 @@
    * Toggle mobile nav dropdowns
    */
   document.querySelectorAll('.navmenu .toggle-dropdown').forEach(navmenu => {
-    navmenu.addEventListener('click', function(e) {
-      e.preventDefault();
-      this.parentNode.classList.toggle('active');
-      this.parentNode.nextElementSibling.classList.toggle('dropdown-active');
-      e.stopImmediatePropagation();
-    });
+      navmenu.addEventListener('click', function(e) {
+          e.preventDefault();
+
+          const isActive = this.parentNode.classList.contains('active');
+
+          document.querySelectorAll('.navmenu .dropdown-active').forEach(activeMenu => {
+              activeMenu.classList.remove('dropdown-active');
+          });
+          document.querySelectorAll('.navmenu .active').forEach(activeItem => {
+              activeItem.classList.remove('active');
+          });
+
+          if (!isActive) {
+              this.parentNode.classList.toggle('active');
+              this.parentNode.nextElementSibling.classList.toggle('dropdown-active');
+          }
+
+          e.stopImmediatePropagation();
+      });
   });
 
-  /**
+
+
+    /**
    * Preloader
    */
   const preloader = document.querySelector('#preloader');
