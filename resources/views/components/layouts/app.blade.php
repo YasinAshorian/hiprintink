@@ -69,7 +69,7 @@
             <div class="col-lg-4 col-md-6 d-flex">
                 <i class="bi bi-geo-alt icon"></i>
                 <div class="address">
-                    <p>آدرس: تهران، کهریزک، شورآباد، جاده واوان، روستای تورقوزآباد، خیابان سیداحمد خمینی، پلاک 93</p>
+                    <p><span class="fw-bold">آدرس </span>: ایران تهران کهریزک خ مصطفی پلاک 93</p>
                 </div>
 
             </div>
@@ -78,7 +78,7 @@
                 <i class="bi bi-telephone icon"></i>
                 <div>
                     <p>
-                        <strong>شماره تماس :</strong> <span dir="ltr"> +98 9308282484 </span><br>
+                        <strong>شماره تماس :</strong> <span dir="ltr"> 09308282484 </span><br><span dir="ltr"> 09122178836 </span><br>
                         <strong>ایمیل :</strong> <span>info@hiprintink.ir</span><br>
                     </p>
                 </div>
@@ -87,10 +87,10 @@
             <div class="col-lg-4 col-md-6">
 
                 <div class="social-links d-flex">
-                    <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.instagram.com/hiprint_ir/" class="instagram"><i class="bi bi-instagram"></i></a>
                     <a href="https://whatsapp.com/channel/0029Vao200sAjPXNCXnRGT40" target="_blank" class="twitter"><i
                             class="bi bi-whatsapp"></i></a>
-                    <a href="#" class="facebook"><i class="bi bi-telegram"></i></a>
+                    <a href="https://t.me/Hiteckmedia" class="facebook"><i class="bi bi-telegram"></i></a>
                 </div>
             </div>
 

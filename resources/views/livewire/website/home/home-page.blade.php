@@ -33,8 +33,8 @@
 
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
-            <h2> محصولات شرکت <span class="text-danger">Hi-print</span></h2>
-            <p>تولد کننده مدیا و مواد اولیه چاپ از کشور چین</p>
+            <h2> شرکت <span class="text-danger">Hi-print</span></h2>
+            <p>تولید کننده و صادر کننده ماشین آلات چاپ و بسته بندی و انواع مواد اولیه کل صنعت چاپ</p>
         </div>
 
         <!-- End Section Title -->
