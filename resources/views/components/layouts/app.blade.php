@@ -25,7 +25,7 @@
     <link href="{{ asset('assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
 
     <!-- Main CSS File -->
-    <link href="{{ asset('assets/css/main.css?v=1.0.1') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/main.css?v=1.0.2') }}" rel="stylesheet">
 
     @livewireStyles
 
