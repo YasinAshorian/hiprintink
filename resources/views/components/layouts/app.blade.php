@@ -167,7 +167,7 @@
 <script src="{{ asset('assets/vendor/purecounter/purecounter_vanilla.js') }}"></script>
 
 <!-- Main JS File -->
-<script src="{{ asset('assets/js/main.js') }}"></script>
+<script src="{{ asset('assets/js/main.js?v=1.0.1') }}"></script>
 
 @livewireScripts
 
