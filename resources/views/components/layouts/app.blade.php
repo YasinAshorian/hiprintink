@@ -33,7 +33,26 @@
 
 <body class="index-page">
 
-<header id="header" class="header d-flex align-items-center fixed-top">
+{{--<div class="container-fluid pre-header fixed-top d-flex align-items-center justify-content-between">--}}
+{{--    <div class="container">--}}
+{{--        <div class="row w-100">--}}
+{{--            <div class="col-xl-12 col-md-12">--}}
+{{--                <div class="short_contact_list m-2">--}}
+{{--                    <ul class="d-flex justify-content-start list-unstyled m-0 py-2">--}}
+{{--                        <li class="mx-2"><a href="mailto:info@sarem.org"> info@hiprintink.ir <span class="fw-bold">ایمیل</span></a></li>--}}
+{{--                        <li class="mx-2"><a href="tel:09122178836"> <span class="fw-bold">شماره تماس : </span> 09122178836</a>--}}
+{{--                        </li>--}}
+{{--                    </ul>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </div>--}}
+{{--</div>--}}
+
+
+<header id="header" class="header d-flex align-items-center fixed-top ">
+
+
     <livewire:components.nav.navbar></livewire:components.nav.navbar>
 </header>
 
@@ -50,7 +69,7 @@
             <div class="col-lg-4 col-md-6 d-flex">
                 <i class="bi bi-geo-alt icon"></i>
                 <div class="address">
-                    <p>آدرس: کهریزک، شورآباد، جاده واوان، روستای تورقوزآباد، خیابان سیداحمد خمینی، پلاک 93</p>
+                    <p>آدرس: تهران، کهریزک، شورآباد، جاده واوان، روستای تورقوزآباد، خیابان سیداحمد خمینی، پلاک 93</p>
                 </div>
 
             </div>
@@ -69,7 +88,8 @@
 
                 <div class="social-links d-flex">
                     <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-                    <a href="#" class="twitter"><i class="bi bi-whatsapp"></i></a>
+                    <a href="https://whatsapp.com/channel/0029Vao200sAjPXNCXnRGT40" target="_blank" class="twitter"><i
+                            class="bi bi-whatsapp"></i></a>
                     <a href="#" class="facebook"><i class="bi bi-telegram"></i></a>
                 </div>
             </div>
@@ -131,9 +151,10 @@
 <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
         class="bi bi-arrow-up-short"></i></a>
 
-<a href="tel:+989308282484" class="contact-button">
-    <i class="bi bi-headset"></i>
+<a href='https://wa.me/+989122178836' target="_blank" class="contact-button">
+    <i class="bi bi-whatsapp"></i>
 </a>
+
 
 <!-- Preloader -->
 <div id="preloader"></div>
