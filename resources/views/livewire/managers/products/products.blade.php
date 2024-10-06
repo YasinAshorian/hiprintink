@@ -53,6 +53,7 @@
                         <tr>
                             <th>#</th>
                             <th>نام محصول</th>
+                            <th>قیمت (تومان ، دلار )</th>
                             <th>گروه محصولاتی</th>
                             <th>دسته بندی</th>
                             <th>تصویر</th>
@@ -66,6 +67,7 @@
                             <tr>
                                 <td>{{ $loop->iteration + $products->firstItem() - 1 }}</td>
                                 <td>{{ $item->name }}</td>
+                                <td>{{ $item->price . " - " . $item->dollar }}</td>
                                 <td><span
                                         class="badge bg-label-primary  me-1">{{ $item->productGroupItem->productGroup->name }}</span>
                                 </td>
