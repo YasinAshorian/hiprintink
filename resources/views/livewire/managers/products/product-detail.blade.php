@@ -126,10 +126,16 @@
                                    wire:model="images" {{ ($create) ? "required" : "" }} multiple>
                         </div>
 
-                        <div class="col-md-6">
-                            <label class="form-label" for="images">مبلغ (تومان)</label>
-                            <input type="number" id="images" class="form-control"
+                        <div class="col-md-3">
+                            <label class="form-label" for="price">مبلغ (تومان)</label>
+                            <input type="number" id="price" class="form-control"
                                    wire:model="price"  required>
+                        </div>
+
+                        <div class="col-md-3">
+                            <label class="form-label" for="dollar">مبلغ (دلار)</label>
+                            <input type="number" id="dollar" class="form-control"
+                                   wire:model="dollar"  required>
                         </div>
 
                         <div class="col-md-12">

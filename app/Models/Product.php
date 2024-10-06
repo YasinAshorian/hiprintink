@@ -19,7 +19,8 @@ class Product extends Model
         'description',
         'status',
         'top_products',
-        'price'
+        'price',
+        'dollar'
 
     ];
 
