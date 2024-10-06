@@ -93,7 +93,7 @@
 
                             <div class="col-md-12">
                                 <input type="file" class="form-control" name="file" placeholder="فایل"
-                                       required="" aria-label="file" wire:model="file">
+                                       aria-label="file" wire:model="file">
                             </div>
 
                             <div class="col-md-12 text-center">
