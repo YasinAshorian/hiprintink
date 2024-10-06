@@ -22,6 +22,10 @@ use Illuminate\Support\Facades\Route;
 use UniSharp\LaravelFilemanager\Lfm;
 
 
+Route::get('migrate', function () {
+   \Illuminate\Support\Facades\Artisan::call("migrate");
+   return "success !";
+});
 Route::get('/', HomePage::class)->name('home-page');
 Route::get('/about-us', App\Livewire\Website\AboutUs\AboutUsPage::class)->name('about-us');
 Route::get('/products', \App\Livewire\Website\Products\Products::class)->name('products');
