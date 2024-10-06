@@ -2,6 +2,7 @@
 
 namespace App\Livewire\Website\ContactUs;
 
+use App\Services\Sms\SmsServiceContext;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 use SebastianBergmann\Diff\Exception;
@@ -36,7 +37,10 @@ class ContactUs extends Component
         try {
 
             $validate['file'] = is_null($this->file) ? null : $this->file->store('contact-us', 'public');
-            \App\Models\ContactUs::query()->create($validate);
+            $created = \App\Models\ContactUs::query()->create($validate);
+
+            $sms = app(SmsServiceContext::class);
+            $sms->sendSms("پیام جدید از وبسایت ." . "\n" . $created->full_name . "\n" . $created->phone_number . "\n" , '09308282484');
 
             $this->full_name = null;
             $this->phone_number = null;
