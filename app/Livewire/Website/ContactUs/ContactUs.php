@@ -40,7 +40,7 @@ class ContactUs extends Component
             $created = \App\Models\ContactUs::query()->create($validate);
 
             $sms = app(SmsServiceContext::class);
-            $sms->sendSms("پیام جدید از وبسایت ." . "\n" . $created->full_name . "\n" . $created->phone_number . "\n" , '09308282484');
+            $sms->sendSms("پیام جدید از وبسایت :" . "\n" . $created->full_name . "\n" . $created->phone_number . "\n" , '09308282484');
 
             $this->full_name = null;
             $this->phone_number = null;
