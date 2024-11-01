@@ -1832,7 +1832,7 @@ section,
 }
 
 .custom-bg {
-    background-image: url(../img/bg/ink-8162729_1920.png);
+    /*background-image: url(../img/bg/ink-8162729_1920.png);*/
     background-repeat: no-repeat !important;
     background-size: cover !important;
 }
