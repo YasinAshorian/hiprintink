@@ -47,7 +47,7 @@
                     <div class="card">
                         <img src="{{ asset('assets/img/products/p-1.jpg') }}" alt="" class="img-fluid">
                         <div class="card-body">
-                            <h3><a href="#" class="stretched-link">جوهر UV</a></h3>
+                            <h3><a href="#" class="stretched-link">جوهر تبلیغاتی اکو-سالونت  </a></h3>
 
                         </div>
                     </div>
@@ -57,7 +57,7 @@
                     <div class="card">
                         <img src="{{ asset('assets/img/products/p-2.jpg') }}" alt="" class="img-fluid">
                         <div class="card-body">
-                            <h3><a href="#" class="stretched-link">جوهر DTF</a></h3>
+                            <h3><a href="#" class="stretched-link">جوهر راکتیو روز</a></h3>
                         </div>
                     </div>
                 </div><!-- End Property Item -->
@@ -66,7 +66,7 @@
                     <div class="card">
                         <img src="{{ asset('assets/img/products/p-3.jpg') }}" alt="" class="img-fluid">
                         <div class="card-body">
-                            <h3><a href="#" class="stretched-link">جوهر Echo Salvent / Salvent</a></h3>
+                            <h3><a href="#" class="stretched-link">جوهر UV NED</a></h3>
                         </div>
                     </div>
                 </div><!-- End Property Item -->
@@ -75,7 +75,7 @@
                     <div class="card">
                         <img src="{{ asset('assets/img/products/p-4.jpg') }}" alt="" class="img-fluid">
                         <div class="card-body">
-                            <h3><a href="#" class="stretched-link">لوازم یدکی و هد </a>
+                            <h3><a href="#" class="stretched-link">جوهر پیگمنت نساجی (مستقیم به پوشاک) </a>
                             </h3>
                         </div>
                     </div>
@@ -85,7 +85,7 @@
                     <div class="card">
                         <img src="{{ asset('assets/img/products/p-5.jpg') }}" alt="" class="img-fluid">
                         <div class="card-body">
-                            <h3><a href="#" class="stretched-link">حلال کوتینگ و وارنیش</a></h3>
+                            <h3><a href="#" class="stretched-link"> جوهر SUBLIMATION </a></h3>
                         </div>
                     </div>
                 </div><!-- End Property Item -->
@@ -94,7 +94,7 @@
                     <div class="card">
                         <img src="{{ asset('assets/img/products/p-6.jpg') }}" cl alt="" class="img-fluid">
                         <div class="card-body">
-                            <h3><a href="#" class="stretched-link"> مدیا های چاپ</a></h3>
+                            <h3><a href="#" class="stretched-link"> جوهر سالونت</h3>
                         </div>
                     </div>
                 </div><!-- End Property Item -->
