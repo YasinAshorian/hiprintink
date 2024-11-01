@@ -76,7 +76,7 @@
                                 </td>
 
                                 <td>
-                                    @if(!is_null($item->pictures()->first()->path))
+                                    @if(!is_null($item->pictures()->first()))
                                         <img src="{{ asset("storage/" . $item->pictures()->first()->path) }}" alt="image"
                                              width="30"></td>
                                     @else
