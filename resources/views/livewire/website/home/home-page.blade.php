@@ -47,7 +47,7 @@
                     <div class="card">
                         <img src="{{ asset('assets/img/products/p-1.jpg') }}" alt="" class="img-fluid">
                         <div class="card-body">
-                            <h3><a href="#" class="stretched-link">جوهر تبلیغاتی اکو-سالونت </a></h3>
+                            <h3><a href="#" class="stretched-link">جوهر تبلیغاتی اکو-سالونت  </a></h3>
 
                         </div>
                     </div>
@@ -103,9 +103,9 @@
 
         </div>
 
-        {{--        <div class="container text-center mt-5">--}}
-        {{--            <a href="#" class="btn btn-outline-secondary px-5 "><span>تمامی محصولات </span></a>--}}
-        {{--        </div>--}}
+{{--        <div class="container text-center mt-5">--}}
+{{--            <a href="#" class="btn btn-outline-secondary px-5 "><span>تمامی محصولات </span></a>--}}
+{{--        </div>--}}
 
     </section>
     <!-- /products -->
@@ -115,7 +115,7 @@
 
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
-            <h2>کیفیت جهانی،<span class="text-danger"> قیمت رقابتی</span></h2>
+            <h2>کیفیت جهانی،<span class="text-danger"> قیمت رقابتی</span> </h2>
             <p>با نوآوری و کیفیت در محصولات، همراهتان هستیم تا بهترین نتایج چاپی را به دست آورید.</p>
         </div>
         <!-- End Section Title -->
@@ -131,22 +131,17 @@
                 </div>
 
                 <div class="col-lg-6 col-12 ">
-                    <p class="pt-3">شرکت <span class="text-danger">Hi-Print</span> با بیش از ۱۵ سال سابقه درخشان در
-                        تولید جوهر و مدیاهای چاپ دیجیتال، به
+                    <p class="pt-3">شرکت <span class="text-danger">Hi-Print</span> با بیش از ۱۵ سال سابقه درخشان در تولید جوهر و مدیاهای چاپ دیجیتال، به
                         عنوان یکی از پیشگامان این صنعت شناخته می‌شود. این شرکت با تکیه بر فناوری‌های پیشرفته و
                         استانداردهای بین‌المللی، محصولاتی با کیفیت بی‌نظیر برای دستگاه‌های Large Format تولید کرده است.
-                        در طی سال‌ها، <span class="text-danger">Hi-Print</span> موفق شده است با ارائه محصولات با کیفیت،
-                        جایگاه معتبری در سطح جهانی کسب
+                        در طی سال‌ها، <span class="text-danger">Hi-Print</span> موفق شده است با ارائه محصولات با کیفیت، جایگاه معتبری در سطح جهانی کسب
                         کند، به‌طوری‌که هم‌اکنون یکی از انتخاب‌های اول برندهای برجسته دستگاه‌های چاپگر در سراسر دنیا شده
                         است.</p>
-                    <p>شرکت <span class="text-danger">Hi-Print</span> به عنوان یکی از بزرگترین تأمین‌کنندگان جوهرهای
-                        <span class="text-danger">Hi-Print</span> در ایران، مفتخر است که امکان
+                    <p>شرکت <span class="text-danger">Hi-Print</span> به عنوان یکی از بزرگترین تأمین‌کنندگان جوهرهای <span class="text-danger">Hi-Print</span> در ایران، مفتخر است که امکان
                         دسترسی آسان به محصولات این برند جهانی را برای مشتریان داخلی فراهم کرده است. با تلاش مستمر و تعهد
-                        به ارائه محصولات با کیفیت، <span class="text-danger">Hi-Print</span> نقش مؤثری در تقویت ارتباط
-                        بین تولیدکنندگان بزرگ جهانی و
+                        به ارائه محصولات با کیفیت، <span class="text-danger">Hi-Print</span> نقش مؤثری در تقویت ارتباط بین تولیدکنندگان بزرگ جهانی و
                         مشتریان ایرانی ایفا کرده و همواره در جهت توسعه و رشد بازار داخلی، گام‌های مؤثری برداشته است. این
-                        همکاری نزدیک با <span class="text-danger">Hi-Print</span> به مشتریان ایرانی این امکان را می‌دهد
-                        تا به پیشرفته‌ترین و با
+                        همکاری نزدیک با <span class="text-danger">Hi-Print</span> به مشتریان ایرانی این امکان را می‌دهد تا به پیشرفته‌ترین و با
                         کیفیت‌ترین محصولات چاپی در دنیا دسترسی داشته باشند.</p>
 
                 </div>
@@ -226,37 +221,33 @@
 
 
                 @foreach($bestProducts as $item)
-                    @if(!is_null($item->pictures()->first()))
-                        <div class="col-md-6 col-lg-3 mb-4 my-1 d-flex">
-                            <a href="{{ route('product-detail', ['product' => $item->name]) }}">
-                                <div class="card h-100">
-                                    <div class="d-flex justify-content-between p-3">
+                    <div class="col-md-6 col-lg-3 mb-4 my-1 d-flex">
+                        <a href="{{ route('product-detail', ['product' => $item->name]) }}">
+                            <div class="card h-100">
+                                <div class="d-flex justify-content-between p-3">
 
-                                    </div>
-                                    <img src="{{ asset('storage/' . $item->pictures()->first()->path) }}"
-                                         class="card-img-top p-2 rounded-2" alt="Laptop"/>
-
-                                    <div class="card-body">
-                                        <div class="text-center">
-                                            <p class="mb-0">{{ $item->name }}</p>
-                                        </div>
-
-                                        <div class="text-center mb-3">
-
-                                            <p class="small">
-                                                <a href="{{ route('product-detail', ['product' => $item->name]) }}"
-                                                   class="text-muted">{{ $item->short_description }}</a>
-                                            </p>
-                                            <p class="mb-0 fw-bold text-secondary">{{ number_format($item->price) }}
-                                                تومان </p>
-
-                                        </div>
-
-                                    </div>
                                 </div>
-                            </a>
-                        </div>
-                    @endif
+                                <img src="{{ asset('storage/' . $item->pictures()->first()->path) }}"
+                                     class="card-img-top p-2 rounded-2" alt="Laptop"/>
+
+                                <div class="card-body">
+                                    <div class="text-center">
+                                        <p class="mb-0">{{ $item->name }}</p>
+                                    </div>
+
+                                    <div class="text-center mb-3">
+
+                                        <p class="small">
+                                            <a href="{{ route('product-detail', ['product' => $item->name]) }}" class="text-muted">{{ $item->short_description }}</a>
+                                        </p>
+                                        <p class="mb-0 fw-bold text-secondary">{{ number_format($item->price) }} تومان </p>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </a>
+                    </div>
                 @endforeach
 
             </div>

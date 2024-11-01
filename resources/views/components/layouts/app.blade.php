@@ -151,7 +151,7 @@
 <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
         class="bi bi-arrow-up-short"></i></a>
 
-<a href='https://wa.me/+989122178836' target="_blank" class="contact-button">
+<a href='https://wa.me/+989308282484' target="_blank" class="contact-button">
     <i class="bi bi-whatsapp"></i>
 </a>
 
