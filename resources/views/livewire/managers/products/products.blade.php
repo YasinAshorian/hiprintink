@@ -75,8 +75,14 @@
                                         class="badge bg-label-primary  me-1">{{ $item->productGroupItem->name }}</span>
                                 </td>
 
-                                <td><img src="{{ asset("storage/" . $item->pictures()->first()->path) }}" alt="image"
-                                         width="30"></td>
+                                <td>
+                                    @if(!is_null($item->pictures()->first()))
+                                        <img src="{{ asset("storage/" . $item->pictures()->first()->path) }}" alt="image"
+                                             width="30"></td>
+                                    @else
+                                        <span class="text-danger fw-bold">تصویر آپلود نشده !</span>
+                                    @endif
+
                                 <td>
 
                                     <a href="{{ route('managers.product-detail', $item) }}"
