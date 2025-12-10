@@ -5,11 +5,11 @@
 
         <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
 
-            @foreach($sliders as $item)
-                <div class="carousel-item {{ $loop->iteration == 1 ? "active" : '' }}">
-                    <img src="{{ asset("storage/" . $item->path) }}" alt="slider">
+            <!--[if BLOCK]><![endif]--><?php $__currentLoopData = $sliders; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                <div class="carousel-item <?php echo e($loop->iteration == 1 ? "active" : ''); ?>">
+                    <img src="<?php echo e(asset("storage/" . $item->path)); ?>" alt="slider">
                 </div>
-            @endforeach
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><!--[if ENDBLOCK]><![endif]-->
 
             <!-- End Carousel Item -->
 
@@ -45,7 +45,7 @@
 
                 <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
                     <div class="card">
-                        <img src="{{ asset('assets/img/products/p-1.jpg') }}" alt="" class="img-fluid">
+                        <img src="<?php echo e(asset('assets/img/products/p-1.jpg')); ?>" alt="" class="img-fluid">
                         <div class="card-body">
                             <h3><a href="#" class="stretched-link">جوهر تبلیغاتی اکو-سالونت  </a></h3>
 
@@ -55,7 +55,7 @@
 
                 <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
                     <div class="card">
-                        <img src="{{ asset('assets/img/products/p-2.jpg') }}" alt="" class="img-fluid">
+                        <img src="<?php echo e(asset('assets/img/products/p-2.jpg')); ?>" alt="" class="img-fluid">
                         <div class="card-body">
                             <h3><a href="#" class="stretched-link">جوهر راکتیو روز</a></h3>
                         </div>
@@ -64,7 +64,7 @@
 
                 <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
                     <div class="card">
-                        <img src="{{ asset('assets/img/products/p-3.jpg') }}" alt="" class="img-fluid">
+                        <img src="<?php echo e(asset('assets/img/products/p-3.jpg')); ?>" alt="" class="img-fluid">
                         <div class="card-body">
                             <h3><a href="#" class="stretched-link">جوهر UV NED</a></h3>
                         </div>
@@ -73,7 +73,7 @@
 
                 <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
                     <div class="card">
-                        <img src="{{ asset('assets/img/products/p-4.jpg') }}" alt="" class="img-fluid">
+                        <img src="<?php echo e(asset('assets/img/products/p-4.jpg')); ?>" alt="" class="img-fluid">
                         <div class="card-body">
                             <h3><a href="#" class="stretched-link">جوهر پیگمنت نساجی (مستقیم به پوشاک) </a>
                             </h3>
@@ -83,7 +83,7 @@
 
                 <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
                     <div class="card">
-                        <img src="{{ asset('assets/img/products/p-5.jpg') }}" alt="" class="img-fluid">
+                        <img src="<?php echo e(asset('assets/img/products/p-5.jpg')); ?>" alt="" class="img-fluid">
                         <div class="card-body">
                             <h3><a href="#" class="stretched-link"> جوهر SUBLIMATION </a></h3>
                         </div>
@@ -92,7 +92,7 @@
 
                 <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
                     <div class="card">
-                        <img src="{{ asset('assets/img/products/p-6.jpg') }}" cl alt="" class="img-fluid">
+                        <img src="<?php echo e(asset('assets/img/products/p-6.jpg')); ?>" cl alt="" class="img-fluid">
                         <div class="card-body">
                             <h3><a href="#" class="stretched-link"> جوهر سالونت</h3>
                         </div>
@@ -103,9 +103,9 @@
 
         </div>
 
-{{--        <div class="container text-center mt-5">--}}
-{{--            <a href="#" class="btn btn-outline-secondary px-5 "><span>تمامی محصولات </span></a>--}}
-{{--        </div>--}}
+
+
+
 
     </section>
     <!-- /products -->
@@ -126,7 +126,7 @@
                 <div class="col-lg-6 col-12 ">
                     <video width="100%" class="img-fluid add-borders rounded-4" autoplay="" loop="" muted=""
                            playsinline="">
-                        <source src="{{ asset('assets/img/about-us/about-us-ink.mp4') }}" type="video/mp4">
+                        <source src="<?php echo e(asset('assets/img/about-us/about-us-ink.mp4')); ?>" type="video/mp4">
                     </video>
                 </div>
 
@@ -223,26 +223,27 @@
 
             <div class="row justify-content-center">
 
-                @foreach($bestProducts as $item)
+                <!--[if BLOCK]><![endif]--><?php $__currentLoopData = $bestProducts; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <div class="col-6 col-md-4 col-lg-3 mb-4 d-flex">
-                        <a href="{{ route('product-detail', ['product' => $item->name]) }}" class="text-decoration-none w-100">
+                        <a href="<?php echo e(route('product-detail', ['product' => $item->name])); ?>" class="text-decoration-none w-100">
                             <div class="card h-100 minimal-card">
 
                                 <div class="p-3 text-center">
-                                    <img src="{{ asset('storage/' . $item->pictures()->first()?->path) }}"
-                                         class="card-img-top product-image" alt="{{ $item->name }}"/>
+                                    <img src="<?php echo e(asset('storage/' . $item->pictures()->first()?->path)); ?>"
+                                         class="card-img-top product-image" alt="<?php echo e($item->name); ?>"/>
                                 </div>
 
                                 <div class="card-body p-3">
                                     <div class="text-center">
-                                        <h6 class="mb-1 text-dark" style="font-weight: 500;">{{ $item->name }}</h6>
+                                        <h6 class="mb-1 text-dark" style="font-weight: 500;"><?php echo e($item->name); ?></h6>
 
                                         <p class="small text-muted mb-2">
-                                            {{ Str::limit($item->short_description, 40) }}
+                                            <?php echo e(Str::limit($item->short_description, 40)); ?>
+
                                         </p>
 
                                         <div class="mt-3">
-                                            <p class="mb-0 fw-bold fs-5 text-primary-red">{{ number_format($item->price) }} <span class="small fw-normal">تومان</span></p>
+                                            <p class="mb-0 fw-bold fs-5 text-primary-red"><?php echo e(number_format($item->price)); ?> <span class="small fw-normal">تومان</span></p>
                                         </div>
 
                                     </div>
@@ -250,7 +251,7 @@
                             </div>
                         </a>
                     </div>
-                @endforeach
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><!--[if ENDBLOCK]><![endif]-->
 
             </div>
 
@@ -293,31 +294,31 @@
 
                     <div class="swiper-slide">
                         <div class="testimonial-item">
-                            <img src="{{ asset('assets/img/brands/1388351.jpg') }}" alt="">
+                            <img src="<?php echo e(asset('assets/img/brands/1388351.jpg')); ?>" alt="">
                         </div>
                     </div>
 
                     <div class="swiper-slide">
                         <div class="testimonial-item">
-                            <img src="{{ asset('assets/img/brands/brother-ink-cartridges.avif') }}" alt="brands">
+                            <img src="<?php echo e(asset('assets/img/brands/brother-ink-cartridges.avif')); ?>" alt="brands">
                         </div>
                     </div>
 
                     <div class="swiper-slide">
                         <div class="testimonial-item">
-                            <img src="{{ asset('assets/img/brands/canon-ink-cartridges.avif') }}" alt="brands">
+                            <img src="<?php echo e(asset('assets/img/brands/canon-ink-cartridges.avif')); ?>" alt="brands">
                         </div>
                     </div>
 
                     <div class="swiper-slide">
                         <div class="testimonial-item">
-                            <img src="{{ asset('assets/img/brands/epson-ink-cartridges.avif') }}" alt="brands">
+                            <img src="<?php echo e(asset('assets/img/brands/epson-ink-cartridges.avif')); ?>" alt="brands">
                         </div>
                     </div>
 
                     <div class="swiper-slide">
                         <div class="testimonial-item">
-                            <img src="{{ asset('assets/img/brands/hp-ink-cartridges.png') }}" alt="brands">
+                            <img src="<?php echo e(asset('assets/img/brands/hp-ink-cartridges.png')); ?>" alt="brands">
                         </div>
                     </div>
 
@@ -337,7 +338,7 @@
         </div>
         <div class="container">
             <div class="row">
-                <img src="{{ asset('assets/img/distributed.jpg') }}" alt="distributed">
+                <img src="<?php echo e(asset('assets/img/distributed.jpg')); ?>" alt="distributed">
             </div>
         </div>
     </section>
@@ -348,21 +349,21 @@
 
             <div class="row gy-4">
 
-                @foreach($blogs as $item)
+                <!--[if BLOCK]><![endif]--><?php $__currentLoopData = $blogs; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <div class="col-md-6 col-lg-3 d-flex">
                         <div class="card h-100">
-                            <img src="{{ asset('storage/' . $item->image) }}" class="card-img-top" alt="...">
+                            <img src="<?php echo e(asset('storage/' . $item->image)); ?>" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h6 class="card-title">{{ $item->subject }}</h6>
-                                <p class="card-text text-truncate fs-13">{{ $item->short_description }}</p>
+                                <h6 class="card-title"><?php echo e($item->subject); ?></h6>
+                                <p class="card-text text-truncate fs-13"><?php echo e($item->short_description); ?></p>
                                 <div class="text-center">
-                                    <a href="{{ route('blog-detail', $item->subject) }}"
+                                    <a href="<?php echo e(route('blog-detail', $item->subject)); ?>"
                                        class="btn btn-secondary my-3 btn-sm px-5 ">مشاهده</a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                @endforeach
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><!--[if ENDBLOCK]><![endif]-->
 
             </div>
         </div>
@@ -370,3 +371,4 @@
     </section>
 
 </div>
+<?php /**PATH /Users/yasinashourian/Documents/projects/hiprintink/resources/views/livewire/website/home/home-page.blade.php ENDPATH**/ ?>
