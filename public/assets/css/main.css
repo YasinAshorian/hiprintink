@@ -297,7 +297,7 @@ h6 {
     .navmenu a,
     .navmenu a:focus {
         color: var(--nav-color);
-        font-size: 16px;
+        font-size: 12px;
         padding: 0 2px;
         font-family: var(--nav-font);
         font-weight: 600;
@@ -1893,4 +1893,46 @@ section,
 }
 .f-amelia {
     font-family: Amelia, "sans-serif" !important;
+}
+
+
+.minimal-card{
+    border:none;
+    border-radius:18px;
+    background:#fff;
+    box-shadow:0 6px 18px rgba(0,0,0,0.06);
+    transition:all .25s ease;
+    overflow:hidden;
+}
+.minimal-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.12);
+}
+.product-image{
+    width:100%;
+    max-height:180px;
+    object-fit:contain;
+    transition:transform .3s ease;
+}
+.minimal-card:hover .product-image{
+    transform:scale(1.05);
+}
+.minimal-card h6{
+    font-size:15px;
+}
+.minimal-card p{
+    margin:0;
+}
+.minimal-card .price{
+    color:#d92332;
+}
+.minimal-card::after{
+    content:"";
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:4px;
+    background:#d92332;
+    opacity:.15;
 }
