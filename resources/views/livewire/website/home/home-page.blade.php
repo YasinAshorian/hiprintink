@@ -218,7 +218,7 @@
             <div class="section-title text-center mb-5">
                 <h2 class="text-uppercase mb-1" style="font-family:'YekanBakh', sans-serif; font-weight: 700; color: #333;">برترین محصولات</h2>
                 <p class="text-muted small">منتخبی از بهترین محصولات موجود در فروشگاه</p>
-                <hr class="w-25 mx-auto border-3 text-primary-red">
+                <hr class="w-25 mx-auto border-3" style="border-color:#d92332;">
             </div>
 
             <div class="row justify-content-center">
@@ -242,7 +242,7 @@
                                         </p>
 
                                         <div class="mt-3">
-                                            <p class="mb-0 fw-bold fs-5 text-primary-red">{{ number_format($item->price) }} <span class="small fw-normal">تومان</span></p>
+                                            <p class="mb-0 fw-bold fs-5" style="color:#d92332;">{{ number_format($item->price) }} <span class="small fw-normal">تومان</span></p>
                                         </div>
 
                                     </div>
@@ -255,8 +255,7 @@
             </div>
 
         </div>
-    </section>
-    <!-- /products -->
+    </section>    <!-- /products -->
 
 
     <!-- Testimonials Section -->
